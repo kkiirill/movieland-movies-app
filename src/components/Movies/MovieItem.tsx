@@ -9,16 +9,16 @@ interface Props {
 export const MovieItem: React.FC<Props> = ({ movie }) => {
   return (
     <li>
-      <div className="ease-in-out  movie-card ">
+      <div className="ease-in-out  movie-card mx-1">
         <div
-          className="h-full bg-cover bg-no-repeat z-1 overflow-x-hidden mr-3"
+          className="h-full bg-cover bg-no-repeat z-1 overflow-x-hidden"
           style={{
             backgroundImage: `url(${BASE_IMAGE_URL}${movie.poster_path})`,
           }}
         >
           <div className="flex items-center justify-between pl-3 pt-2">
             <div className="flex flex-col">
-              <h3 className="pt-32 pb-8 text-2xl font-bold">
+              <h3 className="pt-24 pb-8 text-2xl font-bold">
                 {movie?.title?.substring(0, 19) || movie.name}
               </h3>
               <Link
