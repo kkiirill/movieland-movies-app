@@ -59,12 +59,12 @@ export const Header: React.FC = memo(() => {
             />
           </Link>
           <div className="flex justify-center items-center  hover:translate-y-2 transition-all hover:animate-pulse">
-            <Link
-              to="/"
+            <a
+              href="subsribe"
               className="flex justify-center items-center py-3 px-10 bg-currentRed text-lg font-bold rounded-xl"
             >
               Subscribe Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -11,9 +11,9 @@ export const MoviesTrending: React.FC = memo(() => {
     return (
       <div className="absolute top-1/2 right-[0.5%] cursor-pointer" onClick={onClick}>
         <img
-          src="https://cdn-icons.flaticon.com/png/512/6188/premium/6188747.png?token=exp=1660387874~hmac=fcf9f4286fbfa7cd6ffb311e4bfc5591"
+          src="/images/rightArrow.png"
           alt=""
-          className="bg-none w-12 h-12"
+          className="arrow"
         />
       </div>
     );
@@ -23,9 +23,9 @@ export const MoviesTrending: React.FC = memo(() => {
     return (
       <div className="absolute top-1/2 left-[0.5%] z-10 cursor-pointer" onClick={onClick}>
         <img
-          src="https://cdn-icons.flaticon.com/png/512/6188/premium/6188683.png?token=exp=1660387990~hmac=33b01bdf81b398154b6ba5d766b2fdc8"
+          src="/images/leftArrow.png"
           alt=""
-          className="bg-none w-12 h-12"
+          className="arrow prev"
         />
       </div>
     );
@@ -55,7 +55,7 @@ export const MoviesTrending: React.FC = memo(() => {
   }, []);
   console.log(movies);
   return (
-    <div className="moviesTrending-container overflow-y-hidden">
+    <div className="moviesTrending-container overflow-y-hidden pb-32">
       <Slider {...settings}>
         {movies.map((movie) => (
           <MovieTrending key={movie.id} movie={movie} />

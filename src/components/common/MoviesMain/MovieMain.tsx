@@ -22,7 +22,6 @@ export const MovieTrending: React.FC<Props> = ({ movie }) => {
               <span className="text-base text-currentRed">Language</span>{" "}
               {movie.original_language}
             </div>
-
             <div className="pb-4">
               <span className="text-base text-currentRed">Release</span>{" "}
               {movie.first_air_date}
@@ -32,7 +31,7 @@ export const MovieTrending: React.FC<Props> = ({ movie }) => {
             </div>
             <Link
               to="/"
-              className="flex justify-center items-center bg-currentRed py-3 px-10 text-sm max-w-[190px]"
+              className="flex justify-center items-center bg-currentRed py-3 px-10 text-sm max-w-[190px] hover:bg-hoverRed transition-colors"
             >
               <img
                 src="https://icon-library.com/images/play-button-icon-white/play-button-icon-white-8.jpg"
@@ -45,10 +44,9 @@ export const MovieTrending: React.FC<Props> = ({ movie }) => {
           <div className="flex justify-center items-center w-1/2">
             <Link to="/" className="flex justify-center items-center text-2xl">
               <img
-                
                 src='https://toppng.com/public/uploads/thumbnail/facebook-play-button-png-clip-art-white-video-play-butto-11562848811tluxzxqezx.png'
                 alt=""
-                className="w-24 h-24"
+                className="w-24 h-24  hover:scale-105"
               />
               Watch Trailer
             </Link>

@@ -5,6 +5,8 @@ module.exports = {
     colors: {
       transparent: "transparent",
       currentRed: "#ff2525;",
+      hoverRed: "#6c0000",
+      footerColor: "#737373"
     },
     extend: {},
   },

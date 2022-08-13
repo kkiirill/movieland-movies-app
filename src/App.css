@@ -5,6 +5,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   background: #141414;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -13,4 +14,25 @@ body {
 
 .wrapper {
   padding: 0 64px;
+}
+
+.arrow {
+  background: none;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow.prew {
+  z-index: 10;
+}
+.movie-card {
+  max-width: 450px;
+  height: 450px;
+  transition: 0.5s all;
+  border-left: 5px solid transparent;
+}
+.movie-card:hover {
+  cursor: pointer;
+  border-left: 5px solid #ff2525;
+  transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0);
 }

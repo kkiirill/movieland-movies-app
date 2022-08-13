@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Footer } from "./components/common/Footer/Footer";
 import { Header } from "./components/common/Header/Header";
 import { Home } from "./pages/Home/Home";
 
@@ -11,6 +12,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
