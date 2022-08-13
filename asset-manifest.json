@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movieland-movies-app/static/css/main.cdd135ce.css",
+    "main.js": "/movieland-movies-app/static/js/main.629079ed.js",
+    "index.html": "/movieland-movies-app/index.html",
+    "main.cdd135ce.css.map": "/movieland-movies-app/static/css/main.cdd135ce.css.map",
+    "main.629079ed.js.map": "/movieland-movies-app/static/js/main.629079ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdd135ce.css",
+    "static/js/main.629079ed.js"
+  ]
+}
