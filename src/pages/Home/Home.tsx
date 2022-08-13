@@ -1,9 +1,9 @@
-import { Header } from "../../components/common/Header/Header";
+import { MoviesTrending } from "../../components/common/MoviesMain/MoviesMain";
 
 export const Home: React.FC = () => {
   return (
-    <div className="">
-      <Header />
+    <div className="relative">
+      <MoviesTrending />
     </div>
   );
 };

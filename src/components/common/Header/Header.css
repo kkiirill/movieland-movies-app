@@ -1,20 +1,20 @@
 .header {
   background-image: linear-gradient(
-    to right bottom,
+    to right,
     rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.679),
     transparent
   );
   z-index: 10;
   width: 100%;
+  opacity: 0.9;
 }
 
 .header-content {
   height: 10vh;
   line-height: 10vh;
-  position: relative;
 }
 
 .header-icon {
