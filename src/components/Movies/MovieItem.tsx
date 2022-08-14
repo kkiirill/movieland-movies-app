@@ -7,13 +7,19 @@ interface Props {
 }
 
 export const MovieItem: React.FC<Props> = ({ movie }) => {
-  return (
-    <li>
-      <div className="ease-in-out  movie-card mx-1">
+  return (  
+    <li className="p-1">
+      <Link
+        to={`movies/${movie.id}`}
+        state={{...movie}}
+        className="block ease-in-out  movie-card mx-1"
+      >
         <div
           className="h-full bg-cover bg-no-repeat z-1 overflow-x-hidden"
           style={{
-            backgroundImage: `url(${BASE_IMAGE_URL}${movie.poster_path})`,
+            backgroundImage: `url(${BASE_IMAGE_URL}${
+              movie.poster_path || movie.backdrop_path
+            })`,
           }}
         >
           <div className="flex items-center justify-between pl-3 pt-2">
@@ -22,7 +28,8 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
                 {movie?.title?.substring(0, 19) || movie.name}
               </h3>
               <Link
-                to="/"
+                to={`/movies/${movie.id}`}
+                state={{...movie}}
                 className="flex flex-row justify-center items-center bg-currentRed py-3 px-7 text-[10px] max-w-[130px] hover:bg-hoverRed transition-colors"
               >
                 <img
@@ -35,7 +42,7 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </li>
   );
 };

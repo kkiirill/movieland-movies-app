@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Movie } from "../../types";
 import { MovieItem } from "./MovieItem";
@@ -9,14 +9,14 @@ interface Props {
   url: string;
 }
 
-export const Movies: React.FC<Props> = ({ title, url }) => {
+export const Movies: React.FC<Props> = memo(({ title, url }) => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const SampleNextArrow = (props: { onClick: any }) => {
     const { onClick } = props;
     return (
       <div className="absolute top-1/2 right-[0.7%] cursor-pointer" onClick={onClick}>
         <img
-          src="/images/rightArrow.png"
+          src={require("../../images/rightArrow.png")}
           alt=""
           className="arrow"
         />
@@ -28,7 +28,7 @@ export const Movies: React.FC<Props> = ({ title, url }) => {
     return (
       <div className="absolute top-1/2 left-[1%] z-10 cursor-pointer" onClick={onClick}>
         <img
-          src="/images/leftArrow.png"
+          src={require("../../images/leftArrow.png")}
           alt=""
           className="arrow prev"
         />
@@ -44,7 +44,7 @@ export const Movies: React.FC<Props> = ({ title, url }) => {
     fetchData();
   }, [url]);
   const settings = {
-    infinite: true,
+    infinite: true, 
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -64,4 +64,4 @@ export const Movies: React.FC<Props> = ({ title, url }) => {
       </ul>
     </div>
   );
-};
+});

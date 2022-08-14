@@ -6,7 +6,8 @@ module.exports = {
       transparent: "transparent",
       currentRed: "#ff2525;",
       hoverRed: "#6c0000",
-      footerColor: "#737373"
+      footerColor: "#737373",
+      trailerColor: "#1e272d"
     },
     extend: {},
   },

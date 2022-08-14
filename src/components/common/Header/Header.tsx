@@ -46,7 +46,7 @@ export const Header: React.FC = memo(() => {
           </Link>
           <Link to="/">
             <img
-              src="https://www.citypng.com/public/uploads/small/116389850303ufdx83go2mmx7wz9iodbnh27afxknnf9bofncviac8z2n9w4rwksenu7mwokevjmznxdga1dt7xhiquhtxbvjjjdrqb3pt5rhuk.png"
+              src="https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/ef/c7/f8/efc7f812-0a65-8553-198a-4ad273398ee7/source/512x512bb.jpg"
               alt=""
               className="header-icon mr-2.5 hover:scale-105"
             />

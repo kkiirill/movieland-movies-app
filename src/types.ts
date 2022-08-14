@@ -1,5 +1,4 @@
 export interface Movie {
-  map(arg0: (movie: any) => JSX.Element): import("react").ReactNode;
   backdrop_path: string;
   id: number;
   title: string;
@@ -12,4 +11,10 @@ export interface Movie {
   vote_average: number;
   name?: string;
   first_air_date?: string;
+}
+
+export interface User {
+  id: number | null;
+  email: string | null;
+  password: string | null;
 }

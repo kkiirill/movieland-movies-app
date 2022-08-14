@@ -11,7 +11,7 @@ export const MoviesTrending: React.FC = memo(() => {
     return (
       <div className="absolute top-1/2 right-[0.5%] cursor-pointer" onClick={onClick}>
         <img
-          src="/images/rightArrow.png"
+          src={require("../../../images/rightArrow.png")}
           alt=""
           className="arrow"
         />
@@ -23,7 +23,7 @@ export const MoviesTrending: React.FC = memo(() => {
     return (
       <div className="absolute top-1/2 left-[0.5%] z-10 cursor-pointer" onClick={onClick}>
         <img
-          src="/images/leftArrow.png"
+          src={require("../../../images/leftArrow.png")}
           alt=""
           className="arrow prev"
         />
@@ -36,8 +36,8 @@ export const MoviesTrending: React.FC = memo(() => {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
-    nextArrow: <SampleNextArrow onClick={undefined} />,
-    prevArrow: <SamplePrevArrow onClick={undefined} />,
+    nextArrow: <SampleNextArrow onClick={null} />,
+    prevArrow: <SamplePrevArrow onClick={null} />,
   };
 
   const [movies, setMovies] = useState<Movie[]>([]);
