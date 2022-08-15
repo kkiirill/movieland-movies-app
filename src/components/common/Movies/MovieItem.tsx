@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { BASE_IMAGE_URL } from "../../api/api";
-import { useAppSelector } from "../../store";
-import { Movie } from "../../types";
+import { BASE_IMAGE_URL } from "../../../api/api";
+import { useAppSelector } from "../../../store";
+import { Movie } from "../../../types";
+import { getFirestore, updateDoc, doc, arrayUnion } from "@firebase/firestore";
 
 interface Props {
   movie: Movie;
@@ -10,26 +11,41 @@ interface Props {
 
 export const MovieItem: React.FC<Props> = ({ movie }) => {
   const [like, setLike] = useState<boolean>(false);
-  const user = useAppSelector(state => state.user);
-  const addLike = () => {
+  const [saved, setSaved] = useState<boolean>(false);
+  const user = useAppSelector((state) => state.user);
+
+  const addLike = async () => {
     if (user.email !== null) {
-      setLike(!like)
+      const db = getFirestore();
+      setLike(!like);
+      setSaved(true);
+      await updateDoc(doc(db, "users", `${user?.email}`), {
+        savedItems: arrayUnion({
+          id: movie.id,
+          title: movie.title || movie.name,
+          image: movie.poster_path || movie.backdrop_path,
+        }),
+      });
     } else {
-      alert('you need auth')
+      alert("you need auth");
     }
-  }
+  };
+
   return (
     <li className="p-1 relative movie-card">
-      <div className="absolute top-[10%] left-[5%] w-full h-full opacity-0 hover:opacity-100 z-10" onClick={addLike}>
+      <div
+        className="absolute top-[10%] right-[5%]  movie-icon z-10"
+        onClick={addLike}
+      >
         {like ? (
           <img
-            src={require("../../images/like.png")}
+            src={require("../../../images/like.png")}
             alt="star"
             className="hover:scale-105 w-9 h-9 "
           />
         ) : (
           <img
-            src={require("../../images/star.png")}
+            src={require("../../../images/star.png")}
             alt="star"
             className="hover:scale-105 w-9 h-9 "
           />

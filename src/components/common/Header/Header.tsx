@@ -11,22 +11,22 @@ export const Header: React.FC = memo(() => {
     dispatch(removeUser());
   };
   return (
-    <header className="header sticky top-0 z-20">
+    <header className="header sticky top-0 ">
       <div className="header-content flex justify-between px-16">
-        <div className="flex my-2">
+        <div className="flex justify-center items-center py-2">
           <Link to="/" className="flex">
             <img
               src="https://www.pngplay.com/wp-content/uploads/5/Alphabet-M-Transparent-PNG.png"
               alt="logo"
-              className="w-[60px] h-full"
+              className="w-16 h-16 lg:w-[80px] lg:h-[80px]"
             />
-            <span className="text-currentRed pl-3 pt-2 text-2xl">
+            <div className="flex justify-center items-center text-currentRed pl-3 text-2xl lg:text-3xl">
               MOVIELAND
-            </span>
+            </div>
           </Link>
         </div>
-        <nav>
-          <ul className="flex justify-between text-xl pt-5 ">
+        <nav className="flex justify-between items-center">
+          <ul className="flex justify-between items-center text-2xl">
             <li className="pr-6 hover:text-currentRed transition-colors">
               <Link to="/">Home</Link>
             </li>
@@ -39,70 +39,55 @@ export const Header: React.FC = memo(() => {
             <li className="pr-6 hover:text-currentRed transition-colors">
               <Link to="/pricing">Pricing</Link>
             </li>
-            <li className="hover:text-currentRed transition-colors">
-              <Link to="/contact ">Contact</Link>
-            </li>
           </ul>
         </nav>
         <div className="flex justify-beetween items-center">
-          <Link to="/">
-            <img
-              src="https://icon-library.com/images/search-icon-white/search-icon-white-16.jpg"
-              alt=""
-              className="block header-icon mr-2.5 hover:scale-105"
-            />
-          </Link>
-          <>
-            {user.email ? (
-              <>
-                <button className="">
-                  <Link
-                    to="/account"
-                    className="py-2 px-5 border-solid border-2 border-gray mr-2"
-                  >
-                    {" "}
-                    Account
-                  </Link>
-                </button>
-                <button className="">
-                  <Link
-                    to="/sign-in"
-                    className="bg-currentRed py-2 px-6 hover:bg-hoverRed"
-                    onClick={deleteUser}
-                  >
-                    {" "}
-                    Logout
-                  </Link>
-                </button>
-              </>
-            ) : (
-              <>
-                <button className="">
-                  <Link
-                    to="/sign-up"
-                    className="bg-currentRed py-2 px-6 mr-2 hover:bg-hoverRed"
-                  >
-                    {" "}
-                    Sign Up
-                  </Link>
-                </button>
-                <button className="">
-                  <Link
-                    to="/sign-in"
-                    className="py-2 px-5 border-1-gray border-solid border-2 border-gray"
-                  >
-                    {" "}
-                    Sign In
-                  </Link>
-                </button>
-              </>
-            )}
-          </>
+          {user.email ? (
+            <>
+              <button className="">
+                <Link
+                  to="/account"
+                  className="py-2 px-5 border-solid border-2 border-gray mr-2 hover:border-footerColor"
+                >
+                  {" "}
+                  Account
+                </Link>
+              </button>
+              <button className="">
+                <Link
+                  to="/sign-in"
+                  className="bg-currentRed py-2 px-6 hover:bg-hoverRed"
+                  onClick={deleteUser}
+                >
+                  {" "}
+                  Logout
+                </Link>
+              </button>
+            </>
+          ) : (
+            <>
+              <button className="">
+                <Link
+                  to="/sign-up"
+                  className="bg-currentRed py-2 px-6 mr-2 hover:bg-hoverRed"
+                >
+                  {" "}
+                  Sign Up
+                </Link>
+              </button>
+              <button className="">
+                <Link
+                  to="/sign-in"
+                  className="py-2 px-5 border-1-gray border-solid border-2 border-gray hover:border-footerColor"
+                >
+                  {" "}
+                  Sign In
+                </Link>
+              </button>
+            </>
+          )}
         </div>
       </div>
     </header>
   );
 });
-function userReducer(state: { user: unknown }): unknown {
-  throw new Error("Function not implemented.");
-}

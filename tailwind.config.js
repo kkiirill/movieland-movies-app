@@ -9,7 +9,10 @@ module.exports = {
       footerColor: "#737373",
       trailerColor: "#1e272d",
       gray: "#4b5563",
-      black: "#000000"
+      gray2: "#e2e8f0",
+      gray3: "#e7e5e4",
+      black: "#000000",
+      white: "#ffffff",
     },
     extend: {},
   },

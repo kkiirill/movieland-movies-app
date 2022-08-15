@@ -16,7 +16,7 @@ export const SignUp: React.FC = () => {
       const db = getFirestore()
       const res = await createUserWithEmailAndPassword(auth, email, password);
       setDoc(doc(db, 'users', email), {
-        items: []
+        savedItemss: []
       })
       dispatch(setUser({
         email: res.user.email,

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
-import { Movie } from "../../types";
+import { Movie } from "../../../types";
 import { MovieItem } from "./MovieItem";
 
 interface Props {
@@ -16,7 +16,7 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
     return (
       <div className="absolute top-1/2 right-[0.7%] cursor-pointer" onClick={onClick}>
         <img
-          src={require("../../images/rightArrow.png")}
+          src={require("../../../images/rightArrow.png")}
           alt=""
           className="arrow"
         />
@@ -28,7 +28,7 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
     return (
       <div className="absolute top-1/2 left-[1%] z-10 cursor-pointer" onClick={onClick}>
         <img
-          src={require("../../images/leftArrow.png")}
+          src={require("../../../images/leftArrow.png")}
           alt=""
           className="arrow prev"
         />

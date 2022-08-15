@@ -17,7 +17,7 @@ export const userReducer = createSlice({
     removeUser(state) {
       state.email = null;
       state.id = null
-    }
+    },
   },
 });
 

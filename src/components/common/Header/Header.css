@@ -7,7 +7,7 @@
     rgba(0, 0, 0, 0.679),
     transparent
   );
-  z-index: 10;
+  z-index: 999;
   width: 100%;
   opacity: 0.9;
 }

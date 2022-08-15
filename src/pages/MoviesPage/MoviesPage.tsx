@@ -1,5 +1,5 @@
 import requests from "../../api/api";
-import { Movies } from "../../components/Movies/Movies";
+import { Movies } from "../../components/common/Movies/Movies";
 
 export const MoviesPage: React.FC = () => {
   return (

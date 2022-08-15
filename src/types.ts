@@ -18,3 +18,10 @@ export interface User {
   email: string | null;
   token?: string | null;
 }
+
+export interface FavouriteMovie {
+  id: number;
+  title: string;
+  image: string;
+  name?: string;
+}

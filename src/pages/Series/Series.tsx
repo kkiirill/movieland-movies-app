@@ -1,22 +1,25 @@
-
-
 export const Series: React.FC = () => {
   return (
-    <div>
-      <div
-        className="relative h-screen w-full flex items-center justify-center bg-cover bg-center text-center"
-        style={{backgroundImage:`url(https://images.pexels.com/photos/260689/pexels-photo-260689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)`}}
-      >
-        <div className="absolute top-0 right-0 bottom-0 left-0 bg-gray-900 opacity-75"></div>
+    <div className="relative h-screen flex items-center justify-center ">
+      <img
+        src={require("../../images/bg-batman.png")}
+        className="w-full h-full absolute top-0 left-0 z-1"
+        alt=""
+      />
+      <div className="fixed top-0 left-0  bg-black/60 opacity-1 z-10"></div>
 
-        <div className="z-50 flex flex-col justify-center items-center text-white w-full h-screen">
-          <span className="text-bold">LOGO</span>
-          <h1 className="text-5xl">
-            We are <b>Almost</b> there!
-          </h1>
-          <p>Stay tuned for something amazing!!!</p>
-        </div>
+      <div className="z-50 flex flex-col justify-center items-center text-white w-full h-screen">
+        <span className="text-bold">Oooppss</span>
+        <h1 className="text-6xl">
+          This page <b>is</b> under developed
+        </h1>
+        <p className="pt-2">I guess this page needs a hero</p>
+        <img
+          src={require("../../images/batman.png")}
+          className="block w-14 h-14 hover:scale-150"
+          alt=""
+        />
       </div>
     </div>
   );
-}
+};
