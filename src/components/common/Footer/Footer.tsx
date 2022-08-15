@@ -4,14 +4,14 @@ export const Footer: React.FC = () => {
   return (
     <footer>
       <Subscribe />
-      <div className="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4 text-footerColor">
+      <div className="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4 text-footerColor z-1">
         <h3 className="text-xl leading-none text-gray-800 mt-4">
           Questions? Contact us.
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
           <div className="flex flex-col flex-shrink-0">
             <div className="flex items-center gap-x-4 mt-12">
-              <div className="opacity-50 w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
                 <svg
                   width="18"
                   height="17"
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                   />
                 </svg>
               </div>
-              <div className="opacity-50 w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
                 <svg
                   width="18"
                   height="17"
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
                   />
                 </svg>
               </div>
-              <div className="opacity-50 w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
                 <svg
                   width="16"
                   height="13"
@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
                   />
                 </svg>
               </div>
-              <div className="opacity-50 w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
                 <svg
                   width="18"
                   height="13"

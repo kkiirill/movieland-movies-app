@@ -53,7 +53,6 @@ export const MoviesTrending: React.FC = memo(() => {
     };
     fetchData();
   }, []);
-  console.log(movies);
   return (
     <div className="moviesTrending-container overflow-y-hidden pb-32">
       <Slider {...settings}>

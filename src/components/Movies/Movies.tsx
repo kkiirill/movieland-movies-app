@@ -55,7 +55,7 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
   return (
     <div className="wrapper mb-20">
       <h2 className="text-4xl font-medium pb-6">{title}</h2>
-      <ul>
+      <ul className="scroll-smooth scrollbar-hide">
         <Slider {...settings}>
           {movies.map((movie) => (
             <MovieItem key={movie.id} movie={movie} />

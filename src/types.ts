@@ -14,7 +14,7 @@ export interface Movie {
 }
 
 export interface User {
-  id: number | null;
+  id: string | null;
   email: string | null;
-  password: string | null;
+  token?: string | null;
 }

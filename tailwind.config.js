@@ -7,7 +7,9 @@ module.exports = {
       currentRed: "#ff2525;",
       hoverRed: "#6c0000",
       footerColor: "#737373",
-      trailerColor: "#1e272d"
+      trailerColor: "#1e272d",
+      gray: "#4b5563",
+      black: "#000000"
     },
     extend: {},
   },

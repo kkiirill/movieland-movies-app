@@ -8,9 +8,10 @@ import { MovieDetail } from "./pages/MovieDetail/MovieDetail";
 import { MoviesPage } from "./pages/MoviesPage/MoviesPage";
 import { Pricing } from "./pages/Pricing/Pricing";
 import { Series } from "./pages/Series/Series";
-import SignIn from "./pages/SignIn/SignIn";
-import SignUp from "./pages/SignUp/SignUp";
+import {SignIn} from "./pages/SignIn/SignIn";
+import {SignUp} from "./pages/SignUp/SignUp";
 import { Trailer } from "./pages/Trailer/Trailer";
+import './firebase';
 
 const App: React.FC = () => {
   return (
