@@ -14,10 +14,10 @@ export const MovieTrending: React.FC<Props> = ({ movie }) => {
   return (
     <div>
       <div className="h-screen w-screen bg-cover bg-no-repeat z-1 overflow-y-hidden " style={backgroundImage}>
-        <div className="flex items-center justify-between wrapper">
-          <div className="flex flex-col w-1/2">
-            <h1 className="pt-20 pb-8 text-7xl font-bold">{movie.name}</h1>
-            <p className="pb-8 text-base">{movie.overview}</p>
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between h-full wrapper">
+          <div className="flex flex-col items-center md:items-start md:w-1/2">
+            <h1 className="text-center pt-20 pb-8 text-5xl lg:text-7xl font-bold">{movie.name}</h1>
+            <p className="hidden md:block text-sm pb-8 lg:text-xl max-w-[700px]">{movie.overview}</p>
             <div className="pb-4">
               <span className="text-base text-currentRed">Language</span>{" "}
               {movie.original_language}
@@ -42,7 +42,7 @@ export const MovieTrending: React.FC<Props> = ({ movie }) => {
               PLAY NOW
             </Link>
           </div>
-          <div className="flex justify-center items-center w-1/2">
+          <div className="flex justify-center items-center pt-5 md:p-0 md:w-1/2">
             <Link to="/trailer" className="flex justify-center items-center text-2xl">
               <img
                 src='https://toppng.com/public/uploads/thumbnail/facebook-play-button-png-clip-art-white-video-play-butto-11562848811tluxzxqezx.png'

@@ -1,7 +1,7 @@
 export const Subscribe: React.FC = () => {
   return (
-    <article className="flex justify-center items-center pt-16 border-t-2 pb-20" id="subscribe">
-      <div className="flex justify-center flex-col mx-auto">
+    <article className="flex justify-center items-center pt-16 border-t-2 pb-20 wrapper" id="subscribe">
+      <div className="flex justify-center flex-col mx-auto pt-8">
         <h2 className="text-center text-4xl w-full pb-3">Unlimited movies, TV shows, and more.</h2>
         <p className="flex justify-center t-white font-bold text-md pb-3">
           Watch anywhere. Cancel anytime.

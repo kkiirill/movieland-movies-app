@@ -104,7 +104,7 @@ export const FavouriteMovies: React.FC = memo(() => {
   };
   const emptyFavouriteMovies = () => {
     return (
-      <div className=" flex flex-col justify-center items-cetner wrapper mb z-10 overflow-hidden">
+      <div className=" flex flex-col justify-center items-cetner wrapper mb z-[100] overflow-hidden">
         <h2 className="text-2xl text-center py-10">Oooooppss now it's empty</h2>
         <div className="flex items-center justify-center">
           <img
@@ -117,9 +117,9 @@ export const FavouriteMovies: React.FC = memo(() => {
     );
   };
 
-  return movies.length === 0
+  return movies?.length === 0
     ? emptyFavouriteMovies()
-    : movies.length < 5
+    : movies?.length < 5
     ? moviesWithoutSlider()
     : moviesWithSlider();
 });

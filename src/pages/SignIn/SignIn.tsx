@@ -26,7 +26,7 @@ export const SignIn: React.FC = () => {
   return (
     <div className="top-0 fixed left-0 h-screen w-screen overflow-x-hidden z-100">
       <img
-        className="hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-100"
+        className="block absolute top-0 left-0 w-full h-full object-cover z-100"
         src={require("../../images/bg-image.jpg")}
         alt="Background"
       />

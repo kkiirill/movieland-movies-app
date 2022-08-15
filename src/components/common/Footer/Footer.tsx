@@ -4,12 +4,12 @@ export const Footer: React.FC = () => {
   return (
     <footer>
       <Subscribe />
-      <div className="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4 text-footerColor z-1">
-        <h3 className="text-xl leading-none text-gray-800 mt-4">
+      <div className="mx-auto py-16 xl:px-20 lg:px-12 sm:px-6 px-4 text-footerColor z-1">
+        <h3 className="text-xl leading-none  mt-4">
           Questions? Contact us.
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
-          <div className="flex flex-col flex-shrink-0">
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-2">
+          <div className="hidden xl:flex flex-col flex-shrink-0">
             <div className="flex items-center gap-x-4 mt-12">
               <div className="w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-currentRed rounded-full flex items-center justify-center">
                 <svg
@@ -77,48 +77,48 @@ export const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="sm:ml-0 ml-8">
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+          <div className="sm:ml-0">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
               FAQ
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
               Investor Relations
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
               Privacys
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
               Speed Test
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Help Center
             </p>
           </div>
           <div className="sm:ml-0 ml-8">
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Legal policy
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Cookie Preferences
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Legal Notices
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Account
             </p>
           </div>
           <div>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Corporate Information
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Media Center
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Terms of Use
             </p>
-            <p className="hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 cursor-pointer">
+            <p className="hover:text-gray-500 text-base leading-4 mt-6 cursor-pointer">
               Contact Us
             </p>
           </div>

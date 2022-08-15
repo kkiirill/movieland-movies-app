@@ -31,7 +31,6 @@ export const MoviesTrending: React.FC = memo(() => {
     );
   };
   const settings = {
-    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -54,7 +53,7 @@ export const MoviesTrending: React.FC = memo(() => {
     fetchData();
   }, []);
   return (
-    <div className="moviesTrending-container overflow-y-hidden pb-32">
+    <div className="moviesTrending-container overflow-y-hidden pb-6 md:pb-32">
       <Slider {...settings}>
         {movies.map((movie) => (
           <MovieTrending key={movie.id} movie={movie} />

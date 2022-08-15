@@ -15,7 +15,11 @@ body {
 .wrapper {
   padding: 0 64px;
 }
-
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: 0 32px;
+  }
+}
 .arrow {
   background: none;
   width: 40px;
