@@ -1,13 +1,28 @@
 {
   "files": {
-    "main.css": "/movieland-movies-app/static/css/main.cdd135ce.css",
-    "main.js": "/movieland-movies-app/static/js/main.629079ed.js",
+    "main.css": "/movieland-movies-app/static/css/main.a3298367.css",
+    "main.js": "/movieland-movies-app/static/js/main.e2dc2938.js",
+    "static/media/testvideo.webm": "/movieland-movies-app/static/media/testvideo.6f1b63ab094550299101.webm",
+    "static/media/bg-batman.png": "/movieland-movies-app/static/media/bg-batman.5d0943f7d15b86a416fc.png",
+    "static/media/bg-wishlist.jpg": "/movieland-movies-app/static/media/bg-wishlist.c1cc864ae4033aba7163.jpg",
+    "static/media/bg-image.jpg": "/movieland-movies-app/static/media/bg-image.54311eb113b845a617bd.jpg",
+    "static/media/bg-lost.jpg": "/movieland-movies-app/static/media/bg-lost.7032672aa9c03a25700b.jpg",
+    "static/media/spider.png": "/movieland-movies-app/static/media/spider.6820f1a26a6e05b4736e.png",
+    "static/media/rightArrow.png": "/movieland-movies-app/static/media/rightArrow.1de0386a628a37662dc9.png",
+    "static/media/leftArrow.png": "/movieland-movies-app/static/media/leftArrow.79b92b6119e98aab17e7.png",
+    "static/media/hero.png": "/movieland-movies-app/static/media/hero.b4fd995b3779ff6251d6.png",
+    "static/media/batman.png": "/movieland-movies-app/static/media/batman.9a5ec48504a73852e7ab.png",
+    "static/media/close.png": "/movieland-movies-app/static/media/close.1c2963ee3467352a1681.png",
+    "static/media/close-menu.png": "/movieland-movies-app/static/media/close-menu.6113071412906ba1bb21.png",
+    "static/media/like.png": "/movieland-movies-app/static/media/like.a83bb6e2ffb72c37bbad.png",
+    "static/media/menu.png": "/movieland-movies-app/static/media/menu.13ec091e8b7b572e6efb.png",
+    "static/media/star.png": "/movieland-movies-app/static/media/star.e1f49c9bcd9cd0d1e488.png",
     "index.html": "/movieland-movies-app/index.html",
-    "main.cdd135ce.css.map": "/movieland-movies-app/static/css/main.cdd135ce.css.map",
-    "main.629079ed.js.map": "/movieland-movies-app/static/js/main.629079ed.js.map"
+    "main.a3298367.css.map": "/movieland-movies-app/static/css/main.a3298367.css.map",
+    "main.e2dc2938.js.map": "/movieland-movies-app/static/js/main.e2dc2938.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdd135ce.css",
-    "static/js/main.629079ed.js"
+    "static/css/main.a3298367.css",
+    "static/js/main.e2dc2938.js"
   ]
 }
