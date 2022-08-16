@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/movieland-movies-app/static/css/main.6a757010.css",
-    "main.js": "/movieland-movies-app/static/js/main.32193ce1.js",
-    "static/media/testvideo.webm": "/movieland-movies-app/static/media/testvideo.6f1b63ab094550299101.webm",
+    "main.css": "/movieland-movies-app/static/css/main.c65499b8.css",
+    "main.js": "/movieland-movies-app/static/js/main.5ac5f3b6.js",
+    "static/media/testvideo.mp4": "/movieland-movies-app/static/media/testvideo.f5184cf8a523cab9e77c.mp4",
     "static/media/bg-batman.png": "/movieland-movies-app/static/media/bg-batman.5d0943f7d15b86a416fc.png",
     "static/media/bg-wishlist.jpg": "/movieland-movies-app/static/media/bg-wishlist.c1cc864ae4033aba7163.jpg",
     "static/media/bg-image.jpg": "/movieland-movies-app/static/media/bg-image.54311eb113b845a617bd.jpg",
     "static/media/bg-lost.jpg": "/movieland-movies-app/static/media/bg-lost.7032672aa9c03a25700b.jpg",
+    "static/media/hero-alert.png": "/movieland-movies-app/static/media/hero-alert.187d538e63b461977e00.png",
     "static/media/spider.png": "/movieland-movies-app/static/media/spider.6820f1a26a6e05b4736e.png",
     "static/media/rightArrow.png": "/movieland-movies-app/static/media/rightArrow.1de0386a628a37662dc9.png",
     "static/media/leftArrow.png": "/movieland-movies-app/static/media/leftArrow.79b92b6119e98aab17e7.png",
@@ -18,11 +19,11 @@
     "static/media/menu.png": "/movieland-movies-app/static/media/menu.13ec091e8b7b572e6efb.png",
     "static/media/star.png": "/movieland-movies-app/static/media/star.e1f49c9bcd9cd0d1e488.png",
     "index.html": "/movieland-movies-app/index.html",
-    "main.6a757010.css.map": "/movieland-movies-app/static/css/main.6a757010.css.map",
-    "main.32193ce1.js.map": "/movieland-movies-app/static/js/main.32193ce1.js.map"
+    "main.c65499b8.css.map": "/movieland-movies-app/static/css/main.c65499b8.css.map",
+    "main.5ac5f3b6.js.map": "/movieland-movies-app/static/js/main.5ac5f3b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a757010.css",
-    "static/js/main.32193ce1.js"
+    "static/css/main.c65499b8.css",
+    "static/js/main.5ac5f3b6.js"
   ]
 }
