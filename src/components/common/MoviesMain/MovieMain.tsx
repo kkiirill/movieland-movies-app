@@ -36,7 +36,7 @@ export const MovieMain: React.FC<Props> = memo(({ movie }) => {
               className="flex justify-center items-center bg-currentRed py-3 px-10 text-sm max-w-[190px] hover:bg-hoverRed transition-colors"
             >
               <img
-                src="https://icon-library.com/images/play-button-icon-white/play-button-icon-white-8.jpg"
+                src={require('../../../images/play.jpg')}
                 alt=""
                 className="w-5 h-6"
               />
