@@ -3,6 +3,7 @@ import { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { SliderCount } from "../../../functions/sliderCount";
 import { Movie } from "../../../types";
+import { LoaderMovieItem } from "../../UI/Loaders/LoaderMovieItem";
 import { MovieItem } from "./MovieItem";
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
 
 export const Movies: React.FC<Props> = memo(({ title, url }) => {
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [loader, setLoader] = useState<boolean>(false);
   const SampleNextArrow = (props: { onClick: any }) => {
     const { onClick } = props;
     return (
@@ -44,13 +46,15 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
   };
   useEffect(() => {
     const fetchData = async (): Promise<Movie[]> => {
+      setLoader(true);
       const { data } = await axios.get(url);
       setMovies(data.results);
+      setLoader(false);
       return data;
     };
     fetchData();
   }, [url]);
- 
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -64,11 +68,15 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
     <div className="wrapper mb-20">
       <h2 className="text-4xl font-medium pb-6">{title}</h2>
       <ul className="scroll-smooth scrollbar-hide">
-        <Slider {...settings}>
-          {movies.map((movie) => (
-            <MovieItem key={movie.id} movie={movie} />
-          ))}
-        </Slider>
+        {loader ? (
+          <LoaderMovieItem />
+        ) : (
+          <Slider {...settings}>
+            {movies.map((movie) => (
+              <MovieItem key={movie.id} movie={movie} />
+            ))}
+          </Slider>
+        )}
       </ul>
     </div>
   );

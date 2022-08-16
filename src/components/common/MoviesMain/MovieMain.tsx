@@ -6,7 +6,7 @@ interface Props {
   movie: Movie;
 }
 
-export const MovieTrending: React.FC<Props> = ({ movie }) => {
+export const MovieMain: React.FC<Props> = ({ movie }) => {
   const backgroundImage = {
     backgroundImage: `url(${BASE_IMAGE_URL}${movie.backdrop_path})`,
   };

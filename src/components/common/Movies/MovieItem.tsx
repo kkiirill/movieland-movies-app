@@ -12,7 +12,6 @@ interface Props {
 
 export const MovieItem: React.FC<Props> = ({ movie }) => {
   const [like, setLike] = useState<boolean>(false);
-  const [saved, setSaved] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const user = useAppSelector((state) => state.user);
 
@@ -20,7 +19,6 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
     if (user.email !== null) {
       const db = getFirestore();
       setLike(!like);
-      setSaved(true);
 
       await updateDoc(doc(db, "users", `${user?.email}`), {
         savedItems: arrayUnion({
@@ -37,7 +35,7 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
   return (
     <li className="p-1 relative movie-card">
       {error && (
-        <div className="absolute h-full w-full flex justify-end sm:justify-center items-start top-[10%] z-[100]" onClick={() => setError(false)}>
+        <div className="absolute  h-full w-full flex justify-end items-start top-[10%] z-[100] mx-auto" onClick={() => setError(false)}>
           <Alert color="currentRed" text="You need to login or register" />
         </div>
       )}
