@@ -9,7 +9,7 @@ interface Props {
 
 export const FavouriteMovieItem: React.FC<Props> = ({ movie, deleteMovie }) => {
   return (
-    <li key={movie.id} className="p-1 movie-card w-[220px]">
+    <li key={movie.id} className="p-1 movie-card">
       <div className="block relative ease-in-out movie-card mx-1 ">
         <div
           className="absolute top-[5%] right-[5%]  movie-icon z-10"

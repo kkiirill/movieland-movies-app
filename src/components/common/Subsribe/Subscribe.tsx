@@ -1,4 +1,8 @@
+import { useState } from "react";
+import { Modal } from "../../UI/Modal/Modal";
+
 export const Subscribe: React.FC = () => {
+  const [email, setEmail] = useState<string>('');
   return (
     <article className="flex justify-center items-center pt-16 border-t-2 pb-20 wrapper" id="subscribe">
       <div className="flex justify-center flex-col mx-auto pt-8">
@@ -12,13 +16,13 @@ export const Subscribe: React.FC = () => {
         </p>
         <div className="flex mt-3">
           <input
-            className="mr-1 w-full shadow-inner text-white rounded px-3 text-sm bg-gray-900 border-b border-gray-700"
+            className="mr-1 w-full shadow-inner text-gray rounded px-3 text-sm bg-white border-b border-gray2"
             placeholder="Enter your email"
-            type="text"
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
-          <button className="border-t bg-currentRed hover:shadow-2xl text-white font-bold text-sm rounded px-3 py-2 hover:animate-bounce">
-            Subscribe
-          </button>
+          <Modal text={'Subscribe'} email={email} setEmail={setEmail} />
         </div>
       </div>
     </article>

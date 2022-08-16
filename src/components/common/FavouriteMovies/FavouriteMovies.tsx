@@ -4,6 +4,7 @@ import { useAppSelector } from "../../../store";
 import { FavouriteMovie } from "../../../types";
 import { getFirestore, updateDoc, doc, onSnapshot } from "@firebase/firestore";
 import { FavouriteMovieItem } from "./FavouriteMovieItem";
+import { SliderCount } from "../../../functions/sliderCount";
 
 export const FavouriteMovies: React.FC = memo(() => {
   const user = useAppSelector((state) => state.user);
@@ -46,10 +47,11 @@ export const FavouriteMovies: React.FC = memo(() => {
     );
   };
 
+
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: SliderCount(),
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow onClick={null} />,
     prevArrow: <SamplePrevArrow onClick={null} />,
@@ -117,7 +119,7 @@ export const FavouriteMovies: React.FC = memo(() => {
     );
   };
 
-  return movies?.length === 0
+  return movies?.length === 0 || movies === undefined || null
     ? emptyFavouriteMovies()
     : movies?.length < 5
     ? moviesWithoutSlider()

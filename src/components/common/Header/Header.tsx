@@ -14,9 +14,9 @@ export const Header: React.FC = memo(() => {
             <img
               src="https://www.pngplay.com/wp-content/uploads/5/Alphabet-M-Transparent-PNG.png"
               alt="logo"
-              className="w-10 h-10  xl:w-[80px] xl:h-[80px] hover:scale-105"
+              className="w-10 h-10  lg:w-[50px] lg:h-[50px] 2xl:w-[70px] 2xl:h-[70px] hover:scale-105"
             />
-            <div className="hidden sm:flex justify-center items-center text-currentRed pl-3 text-2xl xl:text-3xl">
+            <div className="hidden sm:flex justify-center items-center text-currentRed pl-3 text-2xl 2xl:text-3xl">
               MOVIELAND
             </div>
           </Link>

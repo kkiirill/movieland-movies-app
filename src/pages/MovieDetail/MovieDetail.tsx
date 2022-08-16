@@ -5,7 +5,6 @@ import { Movie } from "../../types";
 export const MovieDetail = () => {
   const location = useLocation();
   const state = location.state as Movie;
-  console.log(state);
   const backgroundImage = {
     backgroundImage: `url(${BASE_IMAGE_URL}${state?.backdrop_path})`,
   };
@@ -17,11 +16,11 @@ export const MovieDetail = () => {
       >
         <div className="flex justify-center items-center wrapper">
           <div className="flex flex-col">
-            <h1 className="text-center pt-60 pb-8 text-7xl font-bold">
+            <h1 className="text-center  pt-10 lg:pt-20 xl:pt-60 pb-8 text-4xl md:text-7xl font-bold">
               {state.title || state.name}
             </h1>
             <p className="pb-8 text-base">{state.overview}</p>
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center flex-col md:flex-wrap justify-center gap-2">
               <div className="pb-4">
                 <span className="text-base text-currentRed">Language</span>{" "}
                 {state.original_language}

@@ -16,7 +16,7 @@ export const MovieTrending: React.FC<Props> = ({ movie }) => {
       <div className="h-screen w-screen bg-cover bg-no-repeat z-1 overflow-y-hidden " style={backgroundImage}>
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between h-full wrapper">
           <div className="flex flex-col items-center md:items-start md:w-1/2">
-            <h1 className="text-center pt-20 pb-8 text-5xl lg:text-7xl font-bold">{movie.name}</h1>
+            <h1 className="text-center pt-20 pb-8 text-3xl lg:text-7xl font-bold">{movie.name}</h1>
             <p className="hidden md:block text-sm pb-8 lg:text-xl max-w-[700px]">{movie.overview}</p>
             <div className="pb-4">
               <span className="text-base text-currentRed">Language</span>{" "}

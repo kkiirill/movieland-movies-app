@@ -1,4 +1,4 @@
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./components/common/Footer/Footer";
 import { Header } from "./components/common/Header/Header";
@@ -7,12 +7,13 @@ import { MovieDetail } from "./pages/MovieDetail/MovieDetail";
 import { MoviesPage } from "./pages/MoviesPage/MoviesPage";
 import { Pricing } from "./pages/Pricing/Pricing";
 import { Series } from "./pages/Series/Series";
-import {SignIn} from "./pages/SignIn/SignIn";
-import {SignUp} from "./pages/SignUp/SignUp";
+import { SignIn } from "./pages/SignIn/SignIn";
+import { SignUp } from "./pages/SignUp/SignUp";
 import { Trailer } from "./pages/Trailer/Trailer";
-import './firebase';
+import "./firebase";
 import { Account } from "./pages/Account/Account";
 import { PageNotFound } from "./pages/PageNotFound/PageNotFound";
+import { ScrollToTop } from "./functions/scroll";
 
 const App: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <Route path="/account" element={<Account />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

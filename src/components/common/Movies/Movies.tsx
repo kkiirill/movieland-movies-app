@@ -1,6 +1,7 @@
 import axios from "axios";
 import { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
+import { SliderCount } from "../../../functions/sliderCount";
 import { Movie } from "../../../types";
 import { MovieItem } from "./MovieItem";
 
@@ -14,7 +15,10 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
   const SampleNextArrow = (props: { onClick: any }) => {
     const { onClick } = props;
     return (
-      <div className="absolute top-1/2 right-[0.7%] cursor-pointer" onClick={onClick}>
+      <div
+        className="absolute top-1/2 right-[0.7%] cursor-pointer"
+        onClick={onClick}
+      >
         <img
           src={require("../../../images/rightArrow.png")}
           alt=""
@@ -26,7 +30,10 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
   const SamplePrevArrow = (props: { onClick: any }) => {
     const { onClick } = props;
     return (
-      <div className="absolute top-1/2 left-[1%] z-10 cursor-pointer" onClick={onClick}>
+      <div
+        className="absolute top-1/2 left-[1%] z-10 cursor-pointer"
+        onClick={onClick}
+      >
         <img
           src={require("../../../images/leftArrow.png")}
           alt=""
@@ -43,10 +50,11 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
     };
     fetchData();
   }, [url]);
+ 
   const settings = {
-    infinite: true, 
+    infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: SliderCount(),
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow onClick={null} />,
     prevArrow: <SamplePrevArrow onClick={null} />,

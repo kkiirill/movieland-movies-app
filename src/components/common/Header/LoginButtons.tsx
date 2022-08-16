@@ -18,7 +18,7 @@ export const LoginButtons: React.FC = () => {
             <button className="flex justify-center items-cetner">
               <Link
                 to="/account"
-                className="mx-auto py-2 px-2 xl:py-5 xl:px-7  border-solid border-2 border-gray lg:mr-2 hover:border-footerColor text-lg lg:text-2xl"
+                className="mx-auto py-2 px-2 2xl:py-4 2xl:px-6  border-solid border-2 border-gray lg:mr-2 hover:border-footerColor text-lg 2xl:text-2xl"
               >
                 {" "}
                 Account
@@ -27,7 +27,7 @@ export const LoginButtons: React.FC = () => {
             <button className="flex justify-center items-cetner pt-3 lg:p-0">
               <Link
                 to="/sign-in"
-                className="mx-auto bg-currentRed py-2 px-6 xl:py-5 xl:px-8 lg:mr-2 hover:bg-hoverRed text-lg lg:text-2xl"
+                className="mx-auto bg-currentRed py-2 px-6 2xl:py-4 2xl:px-7 lg:mr-2 hover:bg-hoverRed text-lg 2xl:text-2xl"
                 onClick={deleteUser}
               >
                 {" "}
@@ -40,7 +40,7 @@ export const LoginButtons: React.FC = () => {
             <button className="flex justify-center items-cetner">
               <Link
                 to="/sign-up"
-                className="mx-auto bg-currentRed py-2 px-6 xl:py-5 xl:px-8 lg:mr-2 hover:bg-hoverRed text-sm lg:text-2xl"
+                className="mx-auto bg-currentRed py-2 px-6 2xl:py-4 2xl:px-7 lg:mr-2 hover:bg-hoverRed text-sm lg:text-2xl"
               >
                 {" "}
                 Sign Up
@@ -49,7 +49,7 @@ export const LoginButtons: React.FC = () => {
             <button className="flex justify-center items-cetner pt-3 lg:p-0">
               <Link
                 to="/sign-in"
-                className="mx-auto py-2 px-2 xl:py-5 xl:px-7  border-solid border-2 border-gray lg:mr-2 hover:border-footerColor text-sm lg:text-2xl"
+                className="mx-auto py-2 px-2 2xl:py-4 2xl:px-6  border-solid border-2 border-gray lg:mr-2 hover:border-footerColor text-sm lg:text-2xl"
               >
                 {" "}
                 Sign In

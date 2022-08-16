@@ -1,7 +1,7 @@
 import { PricingItem } from "./PricingItem"
 
 export const Pricing: React.FC = () => (
-  <section className="bg-white h-screen px-6 xl:px-0 pb-20">
+  <section className="bg-white h-full px-6 xl:px-0 pb-20">
     <div className="pt-20 mx-auto container">
       <div className="flex flex-col lg:items-center justify-center w-full">
         <h1 className="font-semibold text-gray text-3xl md:text-4xl">

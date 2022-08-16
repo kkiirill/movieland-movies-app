@@ -4,6 +4,7 @@ import { BASE_IMAGE_URL } from "../../../api/api";
 import { useAppSelector } from "../../../store";
 import { Movie } from "../../../types";
 import { getFirestore, updateDoc, doc, arrayUnion } from "@firebase/firestore";
+import { Alert } from "../../UI/Alerts/Alert";
 
 interface Props {
   movie: Movie;
@@ -12,6 +13,7 @@ interface Props {
 export const MovieItem: React.FC<Props> = ({ movie }) => {
   const [like, setLike] = useState<boolean>(false);
   const [saved, setSaved] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
   const user = useAppSelector((state) => state.user);
 
   const addLike = async () => {
@@ -19,6 +21,7 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
       const db = getFirestore();
       setLike(!like);
       setSaved(true);
+
       await updateDoc(doc(db, "users", `${user?.email}`), {
         savedItems: arrayUnion({
           id: movie.id,
@@ -27,12 +30,18 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
         }),
       });
     } else {
-      alert("you need auth");
+      setError(true);
     }
   };
-
+  
   return (
     <li className="p-1 relative movie-card">
+      {error && (
+        <div className="absolute h-full w-full flex justify-end sm:justify-center items-start top-[10%] z-[100]" onClick={() => setError(false)}>
+          <Alert color="currentRed" text="You need to login or register" />
+        </div>
+      )}
+
       <div
         className="absolute top-[10%] right-[5%]  movie-icon z-10"
         onClick={addLike}
@@ -66,7 +75,7 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
         >
           <div className="flex items-center justify-between pl-3 pt-2">
             <div className="flex flex-col">
-              <h3 className="pt-24 pb-8 text-2xl font-bold">
+              <h3 className="pt-24 pb-8 text-xl md:text-2xl font-bold">
                 {movie?.title?.substring(0, 19) || movie.name}
               </h3>
               <div className="flex items-center">

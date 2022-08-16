@@ -39,7 +39,7 @@ export const SignUp: React.FC = () => {
         <div className="max-w-[450px] h-[500px] mx-auto text-white bg-black/80">
           <div className="max-w-[320px] mx-auto py-16">
             <h3 className="text-3xl ">Sign Up</h3>
-            <Form handleData={handleSubmit} />
+            <Form title={'Sign Up'} handleData={handleSubmit} />
             <p className="py-4">
               <span className="text-gray">Already subsribed?</span>{" "}
               <Link to="/sign-in">Sign In</Link>
