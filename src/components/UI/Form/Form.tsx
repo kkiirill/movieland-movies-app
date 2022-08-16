@@ -2,10 +2,12 @@ import * as yup from "yup";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { memo } from "react";
+import { LoaderButtonLogin } from "../Loaders/LoaderButtonLogin";
 
 interface Props {
   handleData: (email: string, password: string) => void;
   title: string;
+  loader: boolean;
 }
 
 type FormValues = {
@@ -18,7 +20,7 @@ const schema = yup.object().shape({
   password: yup.string().min(6).max(32).required(),
 });
 
-export const Form: React.FC<Props> = memo(({ handleData, title }) => {
+export const Form: React.FC<Props> = memo(({ handleData, title, loader }) => {
   const {
     register,
     handleSubmit,
@@ -52,12 +54,16 @@ export const Form: React.FC<Props> = memo(({ handleData, title }) => {
         {...register("password")}
       />
       <p className="text-currentRed">{errors.password?.message}</p>
-      <button
-        type="submit"
-        className="bg-currentRed py-3 my-6 rounded font-bold hover:bg-hoverRed"
-      >
-        {title}
-      </button>
+      {loader ? (
+        <LoaderButtonLogin />
+      ) : (
+        <button
+          type="submit"
+          className="bg-currentRed py-3 my-6 rounded font-bold hover:bg-hoverRed"
+        >
+          {title}
+        </button>
+      )}
     </form>
   );
 });

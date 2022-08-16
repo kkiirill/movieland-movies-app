@@ -1,9 +1,10 @@
 
+import { memo } from "react";
 import requests from "../../api/api";
 import { Movies } from "../../components/common/Movies/Movies";
 import { MoviesMain } from "../../components/common/MoviesMain/MoviesMain";
 
-export const Home: React.FC = () => {
+export const Home: React.FC = memo(() => {
   return (
     <div className="relative">
       <MoviesMain />
@@ -11,4 +12,4 @@ export const Home: React.FC = () => {
       <Movies title="Top Rated" url={requests.fetchTopRated} />
     </div>
   );
-};
+});

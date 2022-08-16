@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { BASE_IMAGE_URL } from "../../../api/api";
 import { useAppSelector } from "../../../store";
 import { Movie } from "../../../types";
 import { getFirestore, updateDoc, doc, arrayUnion } from "@firebase/firestore";
 import { Alert } from "../../UI/Alerts/Alert";
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 interface Props {
   movie: Movie;
 }
 
-export const MovieItem: React.FC<Props> = ({ movie }) => {
-  const [like, setLike] = useState<boolean>(false);
+export const MovieItem: React.FC<Props> = memo(({ movie }) => {
+  const [like, setLike] = useLocalStorage<boolean>("likes", false);
   const [error, setError] = useState<boolean>(false);
   const user = useAppSelector((state) => state.user);
 
@@ -31,11 +32,14 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
       setError(true);
     }
   };
-  
+
   return (
     <li className="p-1 relative movie-card">
       {error && (
-        <div className="absolute  h-full w-full flex justify-end items-start top-[10%] z-[100] mx-auto" onClick={() => setError(false)}>
+        <div
+          className="absolute  h-full w-full flex justify-end items-start top-[10%] z-[100] mx-auto"
+          onClick={() => setError(false)}
+        >
           <Alert color="currentRed" text="You need to login or register" />
         </div>
       )}
@@ -58,11 +62,7 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
           />
         )}
       </div>
-      <Link
-        to={`movies/${movie.id}`}
-        state={{ ...movie }}
-        className="block relative ease-in-out movie-card mx-1"
-      >
+      <div className="block relative ease-in-out movie-card mx-1 cursor-pointer">
         <div
           className="h-full bg-cover bg-no-repeat z-1 overflow-x-hidden "
           style={{
@@ -93,7 +93,7 @@ export const MovieItem: React.FC<Props> = ({ movie }) => {
             </div>
           </div>
         </div>
-      </Link>
+      </div>
     </li>
   );
-};
+});

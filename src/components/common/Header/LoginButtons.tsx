@@ -1,14 +1,15 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../store";
 import { removeUser } from "../../../store/slices/userSlice";
 
-export const LoginButtons: React.FC = () => {
+export const LoginButtons: React.FC = memo(() => {
   const user = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
 
   const deleteUser = () => {
     dispatch(removeUser());
-    localStorage.clear();
+    localStorage.removeItem('users');
   };
   return (
     <>
@@ -60,4 +61,4 @@ export const LoginButtons: React.FC = () => {
       </div>
     </>
   );
-};
+});

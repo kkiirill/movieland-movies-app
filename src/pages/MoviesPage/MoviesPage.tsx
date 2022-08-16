@@ -1,7 +1,8 @@
+import { memo } from "react";
 import requests from "../../api/api";
 import { Movies } from "../../components/common/Movies/Movies";
 
-export const MoviesPage: React.FC = () => {
+export const MoviesPage: React.FC = memo(() => {
   return (
     <main className="mt-16">
       <div className="wrapper">
@@ -28,4 +29,4 @@ export const MoviesPage: React.FC = () => {
       </div>
     </main>
   );
-};
+});

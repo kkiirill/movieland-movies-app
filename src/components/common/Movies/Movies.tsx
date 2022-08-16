@@ -29,6 +29,7 @@ export const Movies: React.FC<Props> = memo(({ title, url }) => {
       </div>
     );
   };
+  
   const SamplePrevArrow = (props: { onClick: any }) => {
     const { onClick } = props;
     return (

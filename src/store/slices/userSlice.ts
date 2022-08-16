@@ -4,6 +4,7 @@ import { User } from "../../types";
 const initialState: User = {
   email: null,
   id: null,
+  likes: false,
 };
 
 export const userReducer = createSlice({

@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { BASE_IMAGE_URL } from "../../api/api";
 import { Movie } from "../../types";
 
-export const MovieDetail = () => {
+export const MovieDetail: React.FC = memo(() => {
   const location = useLocation();
   const state = location.state as Movie;
   const backgroundImage = {
@@ -48,4 +49,4 @@ export const MovieDetail = () => {
       </div>
     </section>
   );
-};
+});

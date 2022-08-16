@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import Slider from "react-slick";
 import { useAppSelector } from "../../../store";
 import { FavouriteMovie } from "../../../types";
@@ -10,27 +10,32 @@ export const FavouriteMovies: React.FC = memo(() => {
   const user = useAppSelector((state) => state.user);
   const [movies, setMovies] = useState<FavouriteMovie[]>([]);
   const db = getFirestore();
-  console.log(movies);
+
   useEffect(() => {
     onSnapshot(doc(db, "users", `${user?.email}`), (doc) => {
       setMovies(doc.data()?.savedItems);
     });
   }, [db, user?.email]);
-  const SampleNextArrow = (props: { onClick: any }) => {
-    const { onClick } = props;
-    return (
-      <div
-        className="absolute top-1/2 right-[0.7%] cursor-pointer"
-        onClick={onClick}
-      >
-        <img
-          src={require("../../../images/rightArrow.png")}
-          alt=""
-          className="arrow"
-        />
-      </div>
-    );
-  };
+
+  const SampleNextArrow = useMemo(
+    () => (props: { onClick: any }) => {
+      const { onClick } = props;
+      return (
+        <div
+          className="absolute top-1/2 right-[0.7%] cursor-pointer"
+          onClick={onClick}
+        >
+          <img
+            src={require("../../../images/rightArrow.png")}
+            alt=""
+            className="arrow"
+          />
+        </div>
+      );
+    },
+    []
+  );
+
   const SamplePrevArrow = (props: { onClick: any }) => {
     const { onClick } = props;
     return (
@@ -47,7 +52,6 @@ export const FavouriteMovies: React.FC = memo(() => {
     );
   };
 
-
   const settings = {
     infinite: true,
     speed: 500,
@@ -63,6 +67,7 @@ export const FavouriteMovies: React.FC = memo(() => {
       await updateDoc(doc(db, "users", `${user?.email}`), {
         savedItems: filteredMovie,
       });
+      localStorage.removeItem("likes");
     } catch (err) {
       console.log(err);
     }

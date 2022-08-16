@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { BASE_IMAGE_URL } from "../../../api/api";
 import { FavouriteMovie } from "../../../types";
 
@@ -7,7 +7,7 @@ interface Props {
   deleteMovie: (id: number) => void;
 }
 
-export const FavouriteMovieItem: React.FC<Props> = ({ movie, deleteMovie }) => {
+export const FavouriteMovieItem: React.FC<Props> = memo(({ movie, deleteMovie }) => {
   return (
     <li key={movie.id} className="p-1 movie-card">
       <div className="block relative ease-in-out movie-card mx-1 ">
@@ -38,4 +38,4 @@ export const FavouriteMovieItem: React.FC<Props> = ({ movie, deleteMovie }) => {
       </div>
     </li>
   );
-};
+});

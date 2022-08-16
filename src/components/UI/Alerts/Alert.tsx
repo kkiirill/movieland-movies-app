@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 interface Props {
   color: string;
   text: string;
 }
 
 
-export const Alert: React.FC<Props> = ({ color, text }) => {
+export const Alert: React.FC<Props> = memo(({ color, text }) => {
   const [showAlert, setShowAlert] = React.useState(true);
   return (
     <>
@@ -31,4 +31,4 @@ export const Alert: React.FC<Props> = ({ color, text }) => {
       ) : null}
     </>
   );
-};
+});

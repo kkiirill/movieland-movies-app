@@ -1,12 +1,13 @@
 import { Movie } from "../../../types";
 import { BASE_IMAGE_URL } from "../../../api/api";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 
 interface Props {
   movie: Movie;
 }
 
-export const MovieMain: React.FC<Props> = ({ movie }) => {
+export const MovieMain: React.FC<Props> = memo(({ movie }) => {
   const backgroundImage = {
     backgroundImage: `url(${BASE_IMAGE_URL}${movie.backdrop_path})`,
   };
@@ -56,4 +57,4 @@ export const MovieMain: React.FC<Props> = ({ movie }) => {
       </div>
     </div>
   );
-};
+});

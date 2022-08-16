@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { Subscribe } from "../Subsribe/Subscribe";
 
-export const Footer: React.FC = () => {
+export const Footer: React.FC = memo(() => {
   return (
     <footer>
       <Subscribe />
@@ -127,4 +128,4 @@ export const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});

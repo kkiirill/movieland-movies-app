@@ -10,8 +10,10 @@ export const SignIn: React.FC = memo(() => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [error, setError] = useState<boolean>(false);
+  const [loader, setLoader] = useState<boolean>(false);
   const handleRegister = async (email: string, password: string) => {
     try {
+      setLoader(true);
       const auth = getAuth();
       const res = await signInWithEmailAndPassword(auth, email, password);
       dispatch(
@@ -20,10 +22,12 @@ export const SignIn: React.FC = memo(() => {
           id: res.user.uid,
         })
       );
+      setLoader(false);
       navigate("/");
     } catch (err) {
       console.log(err);
     } finally {
+      setLoader(false);
       setError(!error);
     }
   };
@@ -40,14 +44,18 @@ export const SignIn: React.FC = memo(() => {
           <div className="max-w-[320px] mx-auto py-16">
             <h3 className="text-3xl ">Sign In</h3>
             {error && (
-              <div onClick={() => setError(false)}>
+              <div className="mt-2"onClick={() => setError(false)}>
                 <Alert
                   color={"yellow"}
                   text={`Sorry, we can't find an account with this email address. Please try again or create a new account`}
                 />
               </div>
             )}
-            <Form title={"Sign In"} handleData={handleRegister} />
+            <Form
+              title={"Sign In"}
+              handleData={handleRegister}
+              loader={loader}
+            />
             <p className="py-4">
               <span className="text-gray">Don't have an account yet?</span>{" "}
               <Link to="/sign-up">Sign Up</Link>
