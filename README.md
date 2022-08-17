@@ -1,5 +1,12 @@
-# Getting Started with Create React App
+MOVIELAND - movies app 
+
+
+A Movie Application using React JS, Redux Toolkit, Firebase(Firestore),Typescript, Tailwind, React Router, React-Hook-Form, please register to be able to add movies to favorites.
+
 [DEMO](https://kkiirill.github.io/movieland-movies-app/)
+
+Home Page:
+![image](https://user-images.githubusercontent.com/87207157/185101402-2e427e9a-8128-49a9-b06b-61b5c7171ddf.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
