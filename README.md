@@ -1,7 +1,7 @@
 MOVIELAND - movies app 
 
 
-A Movie Application using React JS, Redux Toolkit, Firebase(Firestore),Typescript, Tailwind, React Router, React-Hook-Form, please register to be able to add movies to favorites.
+A Movie Application using React, Redux Toolkit, Firebase(Firestore),Typescript, Tailwind, React Router, React-Hook-Form, please register to be able to add movies to favorites.
 
 [DEMO](https://kkiirill.github.io/movieland-movies-app/)
 
