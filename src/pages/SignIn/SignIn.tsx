@@ -46,7 +46,7 @@ export const SignIn: React.FC = memo(() => {
             {error && (
               <div className="mt-2"onClick={() => setError(false)}>
                 <Alert
-                  color={"yellow"}
+                  color={"hoverRed"}
                   text={`Sorry, we can't find an account with this email address. Please try again or create a new account`}
                 />
               </div>

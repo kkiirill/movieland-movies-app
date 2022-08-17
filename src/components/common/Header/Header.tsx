@@ -40,18 +40,18 @@ export const Header: React.FC = memo(() => {
           )}
         </div>
         {menu && (
-          <article className="fixed top-0 left-0 h-screen w-1/3 bg-hoverRed z-[1010] ">
+          <article className="fixed top-0 left-0 h-screen w-1/3 bg-hoverRed z-[1010] lg:hidden">
             <div className="flex-col items-center">
-              <Navigation />
-              <LoginButtons />
+              <Navigation menu={menu} setMenu={setMenu}/>
+              <LoginButtons menu={menu} setMenu={setMenu}/>
             </div>
           </article>
         )}
         <div className="hidden lg:flex justify-between">
-          <Navigation />
+          <Navigation setMenu={setMenu} />
         </div>
         <div className="hidden lg:flex justify-between">
-          <LoginButtons />
+          <LoginButtons setMenu={setMenu}/>
         </div>
       </div>
     </header>
